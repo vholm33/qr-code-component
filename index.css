@@ -63,19 +63,19 @@ body {
 
   --shadow-xl-subtle: 0 25px 25px rgb(0, 0, 0, 0.0477);
 
-  /* ---------- 2.2 Semantic Large ---------- */
+  /* ---------- 2.3 Semantic Mobile ---------- */
 
   /* Typography */
-  --fs-card-title: var(--fs-xl);
+  --fs-card-title: var(--fs-base);
   --fs-card-description: var(--fs-base);
 
-  --fw-card-title: var(--fw-bold);
+  --fw-card-title: var(--fw-regular);
   --fw-card-description: var(--fw-regular);
 
-  --lh-card-title: var(--lh-tight);
+  --lh-card-title: var(--lh-medium);
   --lh-card-description: var(--lh-medium);
 
-  --ls-card-title: 0;
+  --ls-card-title: var(--ls-100);
   --ls-card-description: var(--ls-100);
 
   /* Colors */
@@ -88,20 +88,20 @@ body {
   /* Shadows */
   --shadow-card: var(--shadow-xl-subtle);
 
-  /* ---------- 2.3 Semantic Mobile ---------- */
+  /* ---------- 2.2 Semantic Desktop ---------- */
 
-  @media (max-width: 760px) {
+  @media (min-width: 761px) {
     /* Typography */
-    --fs-card-title: var(--fs-base);
+    --fs-card-title: var(--fs-xl);
     --fs-card-description: var(--fs-base);
 
-    --fw-card-title: var(--fw-regular);
+    --fw-card-title: var(--fw-bold);
     --fw-card-description: var(--fw-regular);
 
-    --lh-card-title: var(--lh-medium);
+    --lh-card-title: var(--lh-tight);
     --lh-card-description: var(--lh-medium);
 
-    --ls-card-title: var(--ls-100);
+    --ls-card-title: 0;
     --ls-card-description: var(--ls-100);
 
     /* Colors */
@@ -149,7 +149,8 @@ main {
   flex-direction: column;
   gap: var(--spacing-250);
   height: auto;
-  width: var(--size-500);
+  width: auto;
+  max-width: var(--size-500);
   padding: var(--spacing-200) var(--spacing-200) var(--spacing-500);
   border-radius: var(--br-lg);
   background-color: var(--white);
