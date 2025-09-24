@@ -43,6 +43,8 @@ body {
   --lh-medium: 1.4;
   --lh-relaxed: 1.75;
 
+  --ls-100: 0.2px;
+
   --spacing-200: 1rem;
   --spacing-250: 1.5rem;
   --spacing-300: 2rem;
@@ -61,23 +63,58 @@ body {
 
   --shadow-xl-subtle: 0 25px 25px rgb(0, 0, 0, 0.0477);
 
-  /* ---------- 2.2 Semantic ---------- */
+  /* ---------- 2.2 Semantic Large ---------- */
 
+  /* Typography */
   --fs-card-title: var(--fs-xl);
   --fs-card-description: var(--fs-base);
+
+  --fw-card-title: var(--fw-bold);
+  --fw-card-description: var(--fw-regular);
 
   --lh-card-title: var(--lh-tight);
   --lh-card-description: var(--lh-medium);
 
+  --ls-card-title: 0;
+  --ls-card-description: var(--ls-100);
+
+  /* Colors */
   --text-card-title: var(--slate-900);
   --text-card-description: var(--slate-500);
 
   --surface-page: var(--slate-300);
   --surface-card: var(--white);
 
+  /* Shadows */
   --shadow-card: var(--shadow-xl-subtle);
-}
 
+  /* ---------- 2.3 Semantic Mobile ---------- */
+
+  @media (max-width: 760px) {
+    /* Typography */
+    --fs-card-title: var(--fs-base);
+    --fs-card-description: var(--fs-base);
+
+    --fw-card-title: var(--fw-regular);
+    --fw-card-description: var(--fw-regular);
+
+    --lh-card-title: var(--lh-medium);
+    --lh-card-description: var(--lh-medium);
+
+    --ls-card-title: var(--ls-100);
+    --ls-card-description: var(--ls-100);
+
+    /* Colors */
+    --text-card-title: var(--slate-900);
+    --text-card-description: var(--slate-500);
+
+    --surface-page: var(--slate-300);
+    --surface-card: var(--white);
+
+    /* Shadows */
+    --shadow-card: var(--shadow-xl-subtle);
+  }
+}
 /* ===================================== */
 /* ---------- 3. Layout ---------- */
 /* ===================================== */
@@ -111,11 +148,12 @@ main {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-250);
-  height: var(--size-800);
+  height: auto;
   width: var(--size-500);
   padding: var(--spacing-200) var(--spacing-200) var(--spacing-500);
   border-radius: var(--br-lg);
   background-color: var(--white);
+  box-shadow: var(--shadow-card);
 }
 
 .qr-card__qr-code {
@@ -131,16 +169,17 @@ main {
 }
 
 .qr-card__title {
-  font-size: var(--fs-xl);
-  font-weight: var(--fw-bold);
+  font-size: var(--fs-card-title);
+  font-weight: var(--fw-card-title);
   line-height: var(--lh-card-title);
+  letter-spacing: var(--ls-card-title);
   color: var(--text-card-title);
 }
 
 .qr-card__description {
-  font-size: var(--fs-base);
-  font-weight: var(--fw-regular);
+  font-size: var(--fs-card-description);
+  font-weight: var(--fw-card-description);
   line-height: var(--lh-card-description);
-  letter-spacing: 0.2px;
+  letter-spacing: var(--ls-card-description);
   color: var(--text-card-description);
 }
