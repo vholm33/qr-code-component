@@ -1,8 +1,15 @@
-j<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="index.css" />
     <link
@@ -16,7 +23,22 @@ j<!DOCTYPE html>
   </head>
   <body>
     <main>
-      <section class="card"></section>
+      <section class="qr-card">
+        <img
+          src="images/image-qr-code.png"
+          alt="qr code"
+          class="qr-card__qr-code"
+        />
+        <div class="qr-card__body-wrapper">
+          <h2 class="qr-card__title">
+            Improve your front-end skills by building projects
+          </h2>
+          <p class="qr-card__description">
+            Scan the QR code to visit Frontend Mentor and take your coding
+            skills to the next level
+          </p>
+        </div>
+      </section>
     </main>
   </body>
 </html>
