@@ -90,7 +90,7 @@ body {
 
   /* ---------- 2.2 Semantic Desktop ---------- */
 
-  @media (min-width: 761px) {
+  @media (min-width: 47.5625rem) {
     /* Typography */
     --fs-card-title: var(--fs-xl);
     --fs-card-description: var(--fs-base);
